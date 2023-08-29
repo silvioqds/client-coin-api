@@ -1,0 +1,29 @@
+{
+  "name": "client-coin-api",
+  "version": "1.0.0",
+  "description": "Consumer Coin API",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ts-node src/index.ts",
+    "server": "tsc && nodemon --watch ./src/**/*.ts --exec ts-node src/index.ts --delay 1500ms"
+  },
+  "author": "Silvio Queiroz",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "dotenv": "^16.3.1",
+    "esm": "^3.2.25",
+    "node-cron": "^3.0.2",
+    "node-fetch": "^3.3.1",
+    "nodemon": "^3.0.1",
+    "oracle": "^0.4.1",
+    "oracledb": "^5.5.0",
+    "typeorm": "^0.3.17"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.1",
+    "typescript": "^5.1.6"
+  }
+}

@@ -1,0 +1,30 @@
+Configurar a váriavel de ambiente:
+
+Baixar o wallet no oracle cloud com o wallet_[DATABASE_NAME].ZIP
+
+NO SQL Developer ir em conexão -> TIPO de conexão -> WALLET TO CLOUD e colocar o arquivo .zip
+
+Colocar usuário e senha e o nome da conexão(database)
+
+
+No node é necessário instalar o oracledb e o oracle via npm
+
+E instalar o instance client do oracle e configurar na váriavel de ambiente PATH no caso do windows
+
+E colocar o arquivo do download em um lugar como D:\oracle\instanceclient_21_11 e reiniciar a máquina
+
+
+export default {
+  type: "oracle",
+  host: "adb.sa-saopaulo-1.oraclecloud.com",
+  port: 1522,
+  username: "ADMIN",
+  password: "[YOUR_PASSWORD]",
+  database: "DB-COIN",
+  connectString: "[PEGAR NO ORACLE CLOUD]",
+  synchronize: true,
+  logging: true,
+  entities: ["src/entities/*.ts"],
+  migrations: ["src/migrations/*.ts"],
+  subscribers: ["src/subscribers/*.ts"],
+};
